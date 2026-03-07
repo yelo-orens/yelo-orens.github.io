@@ -1,0 +1,137 @@
+:root{
+    --bg: #f7f8fb;
+    --paper: #ffffff;
+    --text: #222222;
+    --muted: #6d6d6d;
+    --blue: #1668b0;
+    --blue-weak: #e8f3ff;
+    --yellow: #ffd54f;
+    --yellow-weak: #fff8e1;
+    --red: #ef5350;
+    --red-weak: #ffecec;
+}
+
+/* Page Background */
+body {
+    margin: 0;
+    background-color: var(--bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+}
+
+/* Top Navigation */
+.top-nav {
+    background-color: var(--paper);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 36px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: var(--blue);
+}
+
+.nav-links { display: flex; gap: 24px; }
+
+.nav-links a{
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    transition: all 0.22s ease;
+    font-size: 14px;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+.nav-links a:hover{
+    color: var(--paper);
+    background: var(--text);
+    transform: translateY(-2px);
+}
+
+/* Paper Layout */
+.paper{
+    width: 8.5in;
+    min-height: 11in;
+    background: var(--paper);
+    margin: 40px auto;
+    padding: 0.9in;
+    box-shadow: 0 8px 20px rgba(20,30,60,0.06);
+    border-radius: 8px;
+}
+
+/* Resume Header */
+.resume-header{ text-align:center; margin-bottom:20px; }
+.resume-header h1{ margin:0 0 6px 0; font-size:30px; color:var(--blue); }
+.resume-header p{ margin:3px 0; color:var(--muted); font-size:13px; }
+
+h2{ font-size:13px; font-weight:800; color:var(--text); text-transform:uppercase; letter-spacing:1px; margin:18px 0 10px 0; position:relative; }
+h2::before{ content:""; display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--yellow); margin-right:10px; vertical-align:middle; box-shadow:0 1px 0 rgba(0,0,0,0.06);} 
+
+p{ margin:6px 0; font-size:13px; color:var(--text); }
+ul{ margin:8px 0; padding-left:20px; }
+ul li{ margin:6px 0; font-size:13px; }
+
+/* Hero Section */
+.hero-section{ display:flex; gap:24px; align-items:flex-start; margin-bottom:18px; }
+.hero-section img{ width:120px; height:120px; object-fit:cover; border-radius:8px; border:3px solid var(--blue-weak); }
+.hero-section div{ flex:1; }
+.hero-section p{ font-size:13px; color:var(--muted); }
+.hero{ display:flex; gap:24px; align-items:flex-start; margin-bottom:18px; }
+.hero img{ width:130px; height:130px; object-fit:cover; border-radius:10px; border:4px solid var(--blue-weak); }
+.hero-info{ flex:1; }
+.hero-info h1{ margin:0 0 6px 0; font-size:28px; color:var(--blue); }
+.hero-info .title{ font-weight:600; color:var(--muted); font-size:14px; margin-left:8px; }
+.hero-info .contact{ margin:6px 0 12px 0; color:var(--muted); font-size:13px; }
+.hero-info h2{ margin:0 0 6px 0; }
+.hero-info p{ color:var(--text); font-size:13px; line-height:1.5; }
+
+/* Education Item */
+.education-item{ margin-bottom:12px; padding:8px; border-left:4px solid var(--yellow-weak); background:var(--paper); border-radius:4px; transition:all 0.22s ease; }
+.education-item:hover{ background:var(--yellow-weak); border-left-color:var(--yellow); padding-left:12px; box-shadow:0 4px 12px rgba(255, 213, 79, 0.15); }
+.edu-header{ display:flex; justify-content:space-between; align-items:baseline; }
+.date{ font-size:11px; color:var(--muted); }
+
+/* Skills Grid */
+.skills-grid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.skill-category{ font-size:13px; line-height:1.5; padding:10px; background:linear-gradient(180deg,#fff,#fbfdff); border-left:6px solid transparent; border-radius:6px; transition:all 0.24s ease; }
+.skill-category strong{ font-weight:700; }
+
+/* Alternate colors for skill tiles */
+.skills-grid .skill-category:nth-child(1){ border-left-color:var(--blue); background:rgba(22, 104, 176, 0.04); }
+.skills-grid .skill-category:nth-child(2){ border-left-color:var(--red); background:rgba(239, 83, 80, 0.04); }
+.skills-grid .skill-category:nth-child(3){ border-left-color:var(--red); background:rgba(239, 83, 80, 0.04); }
+.skills-grid .skill-category:nth-child(4){ border-left-color:var(--blue); background:rgba(22, 104, 176, 0.04); }
+
+.skill-category:hover{ transform:translateX(6px); box-shadow:0 8px 24px rgba(30,136,229,0.08); }
+
+/* Project Item */
+.project-item{ margin-bottom:12px; padding:10px; border-left:6px solid var(--blue); background:rgba(22, 104, 176, 0.04); border-radius:6px; transition:all 0.24s ease; }
+.project-item:hover{ background:var(--blue-weak); border-left-color:var(--blue); padding-left:14px; box-shadow:0 8px 24px rgba(30,136,229,0.06); }
+.project-header{ display:flex; justify-content:space-between; align-items:baseline; }
+
+/* Experience Item */
+.experience-item{ margin-bottom:16px; padding:10px; border-bottom:1px solid rgba(0,0,0,0.04); border-left:6px solid transparent; border-radius:6px; transition:all 0.24s ease; }
+.experience-item:nth-child(1){ border-left-color:var(--blue); background:rgba(22, 104, 176, 0.04); }
+.experience-item:nth-child(2){ border-left-color:var(--yellow); background:rgba(255, 213, 79, 0.06); }
+.experience-item:nth-child(3){ border-left-color:var(--red); background:rgba(239, 83, 80, 0.04); }
+.experience-item:nth-child(4){ border-left-color:var(--blue); background:rgba(22, 104, 176, 0.04); }
+.experience-item:nth-child(5){ border-left-color:var(--red); background:rgba(239, 83, 80, 0.04); }
+.experience-item:hover{ background:var(--red-weak); transform:translateX(4px); box-shadow:0 8px 26px rgba(0,0,0,0.04); }
+
+.exp-header{ display:flex; justify-content:space-between; align-items:baseline; }
+.company{ font-size:12px; color:var(--muted); }
+
+/* Print Styling */
+@media print{ body{ background:none; } .top-nav{ display:none; } .paper{ box-shadow:none; margin:0; width:100%; min-height:auto; } }
+
+/* Responsiveness */
+@media (max-width:768px){ .skills-grid{ grid-template-columns:1fr; } .hero-section{ flex-direction:column; align-items:center; text-align:center; } .paper{ width:100%; margin:20px; padding:20px; } }
