@@ -3,103 +3,117 @@
 <head>
     <title>Justine M. Ceniza - Resume</title>
     <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
 
 
-<div class="top-nav">
-    <div class="logo">JMC</div>
-    <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="experience.html">Work Experience</a>
-    </div>
-</div>
 
+<div class="resume-container">
 
-<div class="paper">
-
-
-
-    <section class="hero">
-        <img src="PROFILE PIC.png" alt="Profile Photo">
-        <div class="hero-info">
-             <h1>Justine M. Ceniza <span class="title"></span></h1>
-             <p>Computer Engineering Student </p>
-              <p class="contact">Email: 23103763@usc.edu.ph | +63 905 353 2474</p>
-              <h2>Profile</h2>
-              <p>
-                    Passionate Computer Engineering student specializing in embedded systems,
-                    ultrasonic localization, and healthcare technology applications.
-                    Focused on innovation, precision engineering, and continuous learning.
+   
+    <section class="header">
+        <img src="PROFILE PIC.png" class="profile-photo">
+        
+        <div class="header-text">
+            <h1>Justine M. Ceniza</h1>
+            <p class="subtitle">Computer Engineering Student</p>
+            <p class="contact">
+                23103763@usc.edu.ph • +63 905 353 2474
             </p>
-            </div>
+            <a href="experience.html" class="exp-btn">View Work Experience →</a>
+            <button id="theme-toggle" class="theme-toggle">☀️</button>
+              <script src="script.js"></script>
+        </div>
     </section>
 
-    <section>
+   
+    <section class="section">
+        <h2>Profile</h2>
+        <p>
+            Computer Engineering student specializing in embedded systems,
+            ultrasonic localization, and healthcare technology applications.
+            Focused on precision engineering, problem-solving, and continuous learning.
+        </p>
+    </section>
+
+    <section class="section">
         <h2>Education</h2>
-        <div class="education-item">
-            <div class="edu-header">
-                <strong>Bachelor of Science in Computer Engineering</strong>
-                <span class="date">2023 – Present</span>
+        <div class="item">
+            <div class="item-header">
+                <strong>BS Computer Engineering</strong>
+                <span>2023 – Present</span>
             </div>
-            <p>University of San Carlos | Cebu, Philippines</p>
-            <p><em>Relevant Coursework:</em> Digital Systems, Embedded Systems, Network Design, Database Management</p>
+            <p>University of San Carlos, Cebu</p>
+            <p class="muted">
+                Digital Systems • Embedded Systems • Network Design • Database Management
+            </p>
         </div>
     </section>
-    <br>
-    <section>
+
+
+    <section class="section">
         <h2>Technical Skills</h2>
-      
+
         <div class="skills-grid">
-            <div class="skill-category">
-                <strong>Programming:</strong> C, JavaScript, HTML5, CSS3, Assembly
+            <div>
+                <span class="label">Programming</span>
+                <p>C, JavaScript, HTML5, CSS3, Assembly</p>
             </div>
-            <div class="skill-category">
-                <strong>Hardware:</strong> PIC Microcontrollers, Arduino, Sensor Systems
+
+            <div>
+                <span class="label">Hardware</span>
+                <p>PIC, Arduino, Sensor Systems</p>
             </div>
-            <div class="skill-category">
-                <strong>Tools:</strong> MATLAB, Git, Visual Studio Code, Proteus
+
+            <div>
+                <span class="label">Tools</span>
+                <p>MATLAB, Git, VS Code, Proteus</p>
             </div>
-            <div class="skill-category">
-                <strong>Specializations:</strong> Embedded Systems, Sumobot, LineFollower, IoT
+
+            <div>
+                <span class="label">Specialization</span>
+                <p>Embedded Systems, IoT, Robotics</p>
             </div>
         </div>
     </section>
-<br>
-    <section>
+
+ 
+    <section class="section">
         <h2>Projects</h2>
-        <br>
-        <div class="project-item">
-            <div class="project-header">
+
+        <div class="item">
+            <div class="item-header">
                 <strong>Population Counting System</strong>
-                <span class="date">2024</span>
+                <span>2024</span>
             </div>
             <ul>
-                <li>Developed a lagrange method in estimating the population count in a given year</li>
-                <li>Helps the university in planning and resource allocation for campus facilities</li>
-                <li>Used C language for implementation and mathematical computations</li>
+                <li>Implemented Lagrange interpolation for population estimation</li>
+                <li>Supported university planning and resource allocation</li>
+                <li>Developed using C for mathematical modeling</li>
             </ul>
         </div>
-        <div class="project-item">
-            <div class="project-header">
-                <strong>Smart Healthcare Monitoring Application</strong>
-                <span class="date">2024</span>
+
+        <div class="item">
+            <div class="item-header">
+                <strong>Smart Healthcare Monitoring App</strong>
+                <span>2024</span>
             </div>
             <ul>
-                <li>Built a web-based health data monitoring system using HTML5, CSS3, and JavaScript</li>
-                <li>Integrated real-time sensor data visualization with responsive design</li>
-                <li>Implemented user authentication and secure data storage protocols</li>
+                <li>Developed responsive web app for real-time health monitoring</li>
+                <li>Integrated sensor data visualization</li>
+                <li>Implemented authentication and secure storage</li>
             </ul>
         </div>
-        <div class="project-item">
-            <div class="project-header">
-                <strong>Library Experience Analysis Research</strong>
-                <span class="date">2023</span>
+
+        <div class="item">
+            <div class="item-header">
+                <strong>Library Experience Analysis</strong>
+                <span>2023</span>
             </div>
             <ul>
-                <li>Conducted user experience research on campus library systems</li>
-                <li>Analyzed data from 150+ survey responses using statistical methods</li>
-                <li>Presented findings to university administration with recommendations</li>
+                <li>Analyzed 150+ survey responses using statistics</li>
+                <li>Delivered actionable insights to administration</li>
             </ul>
         </div>
     </section>
