@@ -1,12 +1,17 @@
 :root {
-    --bg: #f5f5f5;
+    --bg: #f4f6fb;
     --paper: #ffffff;
+
+    --primary: #2563eb;   /* Blue */
+    --accent: #ef4444;    /* Red */
+    --highlight: #facc15; /* Yellow */
+
     --text: #111;
     --muted: #666;
     --line: #e5e5e5;
 }
 
-/* BODY */
+
 body {
     margin: 0;
     background: var(--bg);
@@ -15,9 +20,9 @@ body {
     display: flex;
     justify-content: center;
     padding: 40px 0;
+   
 }
 
-/* CONTAINER */
 .resume-container {
     width: 8.5in;
     background: var(--paper);
@@ -25,7 +30,7 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-/* HEADER */
+
 .header {
     display: flex;
     align-items: center;
@@ -38,13 +43,21 @@ body {
     height: 90px;
     object-fit: cover;
     border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.1);
+    border: 3px solid var(--highlight);
 }
 
 .header-text h1 {
     margin: 0;
     font-size: 28px;
     font-weight: 600;
+    color: var(--primary);
 }
+
 
 .subtitle {
     margin: 4px 0;
@@ -56,9 +69,14 @@ body {
     color: var(--muted);
 }
 
-/* SECTIONS */
+
 .section {
     margin-bottom: 35px;
+    transition: all 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-4px);
 }
 
 .section h2 {
@@ -70,7 +88,7 @@ body {
     margin-bottom: 15px;
 }
 
-/* ITEMS */
+
 .item {
     margin-bottom: 20px;
 }
@@ -90,7 +108,7 @@ body {
     font-size: 13px;
 }
 
-/* SKILLS */
+
 .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -108,7 +126,22 @@ body {
     margin: 4px 0 0;
 }
 
-/* LIST */
+.skills-grid div {
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.skills-grid div:hover {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.03);
+}
+
+.skills-grid div:hover .label {
+    color: var(--highlight);
+}
+
 ul {
     margin: 8px 0 0;
     padding-left: 18px;
@@ -123,12 +156,16 @@ li {
     margin-top: 10px;
     font-size: 14px;
     text-decoration: none;
-    color: var(--text); /* FIX */
-    border-bottom: 1px solid var(--text); /* FIX */
+    color: white;
+    background: var(--primary);
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
 }
 
 .exp-btn:hover {
-    opacity: 0.6;
+    background: var(--accent);
+    transform: translateX(4px);
 }
 
 .page-title {
@@ -138,8 +175,15 @@ li {
 
 .job {
     margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #e5e5e5;
+    padding: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.job:hover {
+    background: rgba(37, 99, 235, 0.08);
+    transform: translateY(-5px);
+    border-left: 4px solid var(--primary);
 }
 
 .job-header {
@@ -167,16 +211,21 @@ li {
 
 
 
-/* DARK MODE */
+
 body.dark {
-    --bg: #0f0f0f;
-    --paper: #1a1a1a;
+    --bg: #0f172a;
+    --paper: #1e293b;
+
+    --primary: #3b82f6;
+    --accent: #f87171;
+    --highlight: #fde047;
+
     --text: #ffffff;
-    --muted: #aaaaaa;
-    --line: #333;
+    --muted: #cbd5e1;
+    --line: #334155;
 }
 
-/* Apply variables */
+
 body {
     background: var(--bg);
     color: var(--text);
@@ -206,4 +255,16 @@ body {
 
 .theme-toggle:hover {
     transform: scale(1.1);
+}
+
+.cursor-glow {
+    position: fixed;
+    width: 15px;
+    height: 15px;
+    background: rgba(37, 99, 235, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: 0.05s;
+    z-index: 9999;
 }
